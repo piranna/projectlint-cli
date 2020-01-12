@@ -1,0 +1,6 @@
+.babelrc
+.browserslistrc
+.eslintrc
+coverage/
+__tests__/
+*.tgz
