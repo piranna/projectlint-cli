@@ -1,4 +1,4 @@
-const parseArgs = require("..");
+const parseArgs = require("../lib/parseArgs");
 
 
 const CLI_PATH = process.cwd()

@@ -1,13 +1,10 @@
 #!/usr/bin/env node
 
-const projectlint = require('projectlint')
-
-const cli = require('.')
+const {cli, parseArgs} = require('.')
 
 const params = require('./package.json')
 
 
-const {configs, rules, ...args} = cli({params})
+const {configs, rules, ...args} = parseArgs({params})
 
-projectlint(rules, configs, args)
-.then(console.log)
+cli(rules, configs, args)
