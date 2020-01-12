@@ -92,7 +92,7 @@ test("config", function() {
 });
 
 describe("resolvePackage", function() {
-  const paths = ['./__fixtures__']
+  const paths = [`${CLI_PATH}/__fixtures__`]
 
   test("prefixed", function() {
     const result = parseArgs({argv: ["--plugin", "dumb"], paths});
