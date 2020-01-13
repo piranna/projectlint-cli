@@ -67,7 +67,7 @@ test("config", function() {
     "--plugin",
     "./__fixtures__/dumb plugin 2.js",
     "--config",
-    "./__fixtures__/dumb config.js:default"
+    "./__fixtures__/dumb 2.json:default"
   ]});
 
   expect(result).toMatchInlineSnapshot(`
