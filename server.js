@@ -7,4 +7,4 @@ const params = require('./package.json')
 
 const {configs, rules, ...args} = parseArgs({params})
 
-cli(rules, configs, args)
+cli(rules, configs, args).pipe(process.stdout)
