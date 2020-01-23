@@ -10,38 +10,67 @@ test("no arguments", function() {
   }
 
   expect(func).toThrowErrorMatchingInlineSnapshot(
-    `"\`rules\` argument must be set"`
+    `"The \\"path\\" argument must be of type string. Received undefined"`
   );
 });
 
-test("basic", function(done) {
-  const rules = {
-    dumb: {
-      evaluate() {}
-    }
-  };
+describe("reports", function() {
+  test("json", function(done) {
+    const rules = {
+      dumb: {
+        evaluate() {}
+      }
+    };
 
-  // const config = ["dumb"];
-  const config = {
-    dumb: "warning"
-  };
+    // const config = ["dumb"];
+    const config = {
+      dumb: "warning"
+    };
 
-  const result = cli(rules, config);
+    const result = cli(rules, config, "json");
 
-  expect(result).toBeInstanceOf(Readable);
+    expect(result).toBeInstanceOf(Readable);
 
-  result.pipe(
-    concat({ encoding: "string" }, function(result) {
-      done(
-        expect(result).toMatchInlineSnapshot(`
-          "[
-            {
-              \\"name\\": \\"dumb\\",
-              \\"projectRoot\\": \\"/home/piranna/github/projectlint/cli\\"
-            }
-          ]"
-        `)
-      );
-    })
-  );
+    result.pipe(
+      concat({ encoding: "string" }, function(result) {
+        done(
+          expect(result).toMatchInlineSnapshot(`
+            "{
+              \\"/home/piranna/github/projectlint/cli\\": {
+                \\"dumb\\": {}
+              }
+            }"
+          `)
+        );
+      })
+    );
+  });
+
+  test("ndjson", function(done) {
+    const rules = {
+      dumb: {
+        evaluate() {}
+      }
+    };
+
+    // const config = ["dumb"];
+    const config = {
+      dumb: "warning"
+    };
+
+    const result = cli(rules, config, "ndjson");
+
+    expect(result).toBeInstanceOf(Readable);
+
+    result.pipe(
+      concat({ encoding: "string" }, function(result) {
+        done(
+          expect(result).toMatchInlineSnapshot(`
+            "{\\"name\\":\\"dumb\\",\\"projectRoot\\":\\"/home/piranna/github/projectlint/cli\\"}
+            "
+          `)
+        );
+      })
+    );
+  });
 });

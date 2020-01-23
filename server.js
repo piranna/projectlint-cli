@@ -5,6 +5,6 @@ const {cli, parseArgs} = require('.')
 const params = require('./package.json')
 
 
-const {configs, rules, ...args} = parseArgs({params})
+const {configs, format, rules, ...options} = parseArgs({params})
 
-cli(rules, configs, args).pipe(process.stdout)
+cli(rules, configs, format, options).pipe(process.stdout)
