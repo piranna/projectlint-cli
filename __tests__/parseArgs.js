@@ -12,6 +12,7 @@ test("no arguments", function() {
       "configs": Array [],
       "fix": false,
       "format": "ndjson",
+      "outputLevel": null,
       "projectRoot": Array [],
       "rules": Object {},
     }
@@ -26,6 +27,7 @@ test("plugin", function() {
       "configs": Array [],
       "fix": false,
       "format": "ndjson",
+      "outputLevel": null,
       "projectRoot": Array [],
       "rules": Object {
         "${CLI_PATH}/__fixtures__/dumb plugin.js": Object {
@@ -53,6 +55,7 @@ test("rule", function() {
       ],
       "fix": false,
       "format": "ndjson",
+      "outputLevel": null,
       "projectRoot": Array [],
       "rules": Object {
         "${CLI_PATH}/__fixtures__/dumb plugin 2.js": Object {
@@ -83,6 +86,7 @@ test("config", function() {
       ],
       "fix": false,
       "format": "ndjson",
+      "outputLevel": null,
       "projectRoot": Array [],
       "rules": Object {
         "${CLI_PATH}/__fixtures__/dumb plugin 2.js": Object {
@@ -106,6 +110,7 @@ describe("resolvePackage", function() {
         "configs": Array [],
         "fix": false,
         "format": "ndjson",
+        "outputLevel": null,
         "projectRoot": Array [],
         "rules": Object {
           "${CLI_PATH}/__fixtures__/projectlint-plugin-dumb.js": Object {
@@ -126,6 +131,7 @@ describe("resolvePackage", function() {
         "configs": Array [],
         "fix": false,
         "format": "ndjson",
+        "outputLevel": null,
         "projectRoot": Array [],
         "rules": Object {
           "${CLI_PATH}/__fixtures__/@projectlint/plugin-dumb 2.js": Object {

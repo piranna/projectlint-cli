@@ -1,7 +1,5 @@
 const { Readable } = require("stream");
 
-const concat = require("concat-stream");
-
 const cli = require("../lib/cli");
 
 test("no arguments", function() {
@@ -27,23 +25,19 @@ describe("reports", function() {
       dumb: "warning"
     };
 
-    const result = cli(rules, config, "json");
-
-    expect(result).toBeInstanceOf(Readable);
-
-    result.pipe(
-      concat({ encoding: "string" }, function(result) {
+    const stdout = {
+      write(data) {
         done(
-          expect(result).toMatchInlineSnapshot(`
+          expect(data).toMatchInlineSnapshot(`
             "{
-              \\"/home/piranna/github/projectlint/cli\\": {
-                \\"dumb\\": {}
-              }
+              \\"/home/piranna/github/projectlint/cli\\": {}
             }"
           `)
         );
-      })
-    );
+      }
+    };
+
+    cli(rules, config, "json", { stdout });
   });
 
   test("ndjson", function(done) {
@@ -58,19 +52,17 @@ describe("reports", function() {
       dumb: "warning"
     };
 
-    const result = cli(rules, config, "ndjson");
-
-    expect(result).toBeInstanceOf(Readable);
-
-    result.pipe(
-      concat({ encoding: "string" }, function(result) {
+    const stdout = {
+      write(data) {
         done(
-          expect(result).toMatchInlineSnapshot(`
-            "{\\"name\\":\\"dumb\\",\\"projectRoot\\":\\"/home/piranna/github/projectlint/cli\\"}
-            "
-          `)
+          expect(data).toMatchInlineSnapshot(`
+"{\\"name\\":\\"dumb\\",\\"projectRoot\\":\\"/home/piranna/github/projectlint/cli\\",\\"level\\":0}
+"
+`)
         );
-      })
-    );
+      }
+    };
+
+    cli(rules, config, "ndjson", { stdout });
   });
 });
