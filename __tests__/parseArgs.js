@@ -11,7 +11,7 @@ test("no arguments", function() {
     Object {
       "configs": Array [],
       "fix": false,
-      "format": "ndjson",
+      "format": "tasktree",
       "outputLevel": null,
       "projectRoot": Array [],
       "rules": Object {},
@@ -26,7 +26,7 @@ test("plugin", function() {
     Object {
       "configs": Array [],
       "fix": false,
-      "format": "ndjson",
+      "format": "tasktree",
       "outputLevel": null,
       "projectRoot": Array [],
       "rules": Object {
@@ -54,7 +54,7 @@ test("rule", function() {
         "dumb rule",
       ],
       "fix": false,
-      "format": "ndjson",
+      "format": "tasktree",
       "outputLevel": null,
       "projectRoot": Array [],
       "rules": Object {
@@ -85,7 +85,7 @@ test("config", function() {
         ],
       ],
       "fix": false,
-      "format": "ndjson",
+      "format": "tasktree",
       "outputLevel": null,
       "projectRoot": Array [],
       "rules": Object {
@@ -109,7 +109,7 @@ describe("resolvePackage", function() {
       Object {
         "configs": Array [],
         "fix": false,
-        "format": "ndjson",
+        "format": "tasktree",
         "outputLevel": null,
         "projectRoot": Array [],
         "rules": Object {
@@ -130,7 +130,7 @@ describe("resolvePackage", function() {
       Object {
         "configs": Array [],
         "fix": false,
-        "format": "ndjson",
+        "format": "tasktree",
         "outputLevel": null,
         "projectRoot": Array [],
         "rules": Object {
