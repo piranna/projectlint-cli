@@ -13,6 +13,7 @@ test("no arguments", function() {
       "fix": false,
       "projectRoot": Array [],
       "rules": Object {},
+      "use_projectlintrc": true,
     }
   `);
 });
@@ -32,6 +33,7 @@ test("plugin", function() {
           },
         },
       },
+      "use_projectlintrc": true,
     }
   `);
 });
@@ -58,6 +60,7 @@ test("rule", function() {
           },
         },
       },
+      "use_projectlintrc": true,
     }
   `);
 });
@@ -87,6 +90,7 @@ test("config", function() {
           },
         },
       },
+      "use_projectlintrc": true,
     }
   `);
 });
@@ -109,6 +113,7 @@ describe("resolvePackage", function() {
             },
           },
         },
+        "use_projectlintrc": true,
       }
     `);
   });
@@ -128,6 +133,7 @@ describe("resolvePackage", function() {
             },
           },
         },
+        "use_projectlintrc": true,
       }
     `);
   });
