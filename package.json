@@ -26,9 +26,9 @@
   },
   "homepage": "https://github.com/projectlint/cli#readme",
   "dependencies": {
+    "@projectlint/projectlint": "github:projectlint/projectlint",
     "argparse": "^1.0.10",
     "json2md": "^1.6.5",
-    "projectlint": "github:projectlint/projectlint",
     "tasktree-cli": "projectlint/tasktree"
   },
   "devDependencies": {
