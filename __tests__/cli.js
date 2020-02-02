@@ -30,7 +30,11 @@ describe("reports", function() {
         done(
           expect(data).toMatchInlineSnapshot(`
             "{
-              \\"/home/piranna/github/projectlint/cli\\": {}
+              \\"/home/piranna/github/projectlint/cli\\": {
+                \\"dumb\\": {
+                  \\"level\\": 0
+                }
+              }
             }"
           `)
         );

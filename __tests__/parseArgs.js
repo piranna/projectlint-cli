@@ -11,7 +11,7 @@ test("no arguments", function() {
       "configs": Array [],
       "fix": false,
       "format": "tasktree",
-      "outputLevel": null,
+      "outputLevel": 1,
       "projectRoot": Array [],
       "rules": Object {},
       "use_projectlintrc": true,
@@ -29,7 +29,7 @@ test("plugin", function() {
       "configs": Array [],
       "fix": false,
       "format": "tasktree",
-      "outputLevel": null,
+      "outputLevel": 1,
       "projectRoot": Array [],
       "rules": Object {
         "${CLI_PATH}/__fixtures__/dumb plugin.js": Object {
@@ -55,7 +55,7 @@ test("rule", function() {
       ],
       "fix": false,
       "format": "tasktree",
-      "outputLevel": null,
+      "outputLevel": 1,
       "projectRoot": Array [],
       "rules": Object {
         "${CLI_PATH}/__fixtures__/dumb plugin 2.js": Object {
@@ -89,7 +89,7 @@ test("config", function() {
       ],
       "fix": false,
       "format": "tasktree",
-      "outputLevel": null,
+      "outputLevel": 1,
       "projectRoot": Array [],
       "rules": Object {
         "${CLI_PATH}/__fixtures__/dumb plugin 2.js": Object {
@@ -114,7 +114,7 @@ describe("resolvePackage", function() {
         "configs": Array [],
         "fix": false,
         "format": "tasktree",
-        "outputLevel": null,
+        "outputLevel": 1,
         "projectRoot": Array [],
         "rules": Object {
           "${CLI_PATH}/__fixtures__/projectlint-plugin-dumb.js": Object {
@@ -136,7 +136,7 @@ describe("resolvePackage", function() {
         "configs": Array [],
         "fix": false,
         "format": "tasktree",
-        "outputLevel": null,
+        "outputLevel": 1,
         "projectRoot": Array [],
         "rules": Object {
           "${CLI_PATH}/__fixtures__/@projectlint/plugin-dumb 2.js": Object {
