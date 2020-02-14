@@ -1,5 +1,3 @@
-const { Readable } = require("stream");
-
 const cli = require("../lib/cli");
 
 test("no arguments", function() {
