@@ -90,9 +90,9 @@ describe("reports", function() {
       write(data) {
         done(
           expect(data).toMatchInlineSnapshot(`
-"{\\"name\\":\\"dumb\\",\\"projectRoot\\":\\"/home/piranna/github/projectlint/cli\\",\\"level\\":0}
-"
-`)
+            "{\\"name\\":\\"dumb\\",\\"projectRoot\\":\\"/home/piranna/github/projectlint/cli\\",\\"level\\":0}
+            "
+          `)
         );
       }
     };
