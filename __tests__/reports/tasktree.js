@@ -107,7 +107,7 @@ test("failure as error", function () {
   });
 });
 
-test("error", function () {
+test("error at warning level", function () {
   const rules = {
     dumb: {
       evaluate() {
