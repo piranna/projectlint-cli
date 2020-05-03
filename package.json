@@ -28,15 +28,15 @@
   "dependencies": {
     "@projectlint/projectlint": "github:projectlint/projectlint",
     "argparse": "^1.0.10",
-    "json2md": "^1.6.5",
+    "json2md": "^1.7.0",
     "tasktree-cli": "projectlint/tasktree"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.8.4",
-    "babel-eslint": "^10.0.3",
+    "@babel/preset-env": "^7.9.6",
+    "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
-    "jest-cli": "^25.1.0",
-    "prettier": "^1.19.1"
+    "jest-cli": "^25.5.4",
+    "prettier": "^2.0.5"
   },
   "jest": {
     "collectCoverageFrom": [
