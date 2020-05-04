@@ -84,7 +84,7 @@ test("failure as error", function (done) {
 
           ### /home/piranna/github/projectlint/cli
 
-          #### Error: dumb
+          #### Error [fail]: dumb
           "
         `)
       );
